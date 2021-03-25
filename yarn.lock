@@ -1648,9 +1648,9 @@
     pretty-format "^26.6.2"
 
 "@testing-library/jest-dom@^5.11.4":
-  version "5.11.9"
-  resolved "https://registry.yarnpkg.com/@testing-library/jest-dom/-/jest-dom-5.11.9.tgz#e6b3cd687021f89f261bd53cbe367041fbd3e975"
-  integrity sha512-Mn2gnA9d1wStlAIT2NU8J15LNob0YFBVjs2aEQ3j8rsfRQo+lAs7/ui1i2TGaJjapLmuNPLTsrm+nPjmZDwpcQ==
+  version "5.11.10"
+  resolved "https://registry.yarnpkg.com/@testing-library/jest-dom/-/jest-dom-5.11.10.tgz#1cd90715023e1627f5ed26ab3b38e6f22d77046c"
+  integrity sha512-FuKiq5xuk44Fqm0000Z9w0hjOdwZRNzgx7xGGxQYepWFZy+OYUMOT/wPI4nLYXCaVltNVpU1W/qmD88wLWDsqQ==
   dependencies:
     "@babel/runtime" "^7.9.2"
     "@types/testing-library__jest-dom" "^5.9.1"
@@ -2254,10 +2254,10 @@ acorn@^8.0.5:
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-8.1.0.tgz#52311fd7037ae119cbb134309e901aa46295b3fe"
   integrity sha512-LWCF/Wn0nfHOmJ9rzQApGnxnvgfROzGilS8936rqN/lfcYkY9MYZzdMqN+2NJ4SlTc+m5HiSa+kNfDtI64dwUA==
 
-ada-design@^0.1.33:
-  version "0.1.33"
-  resolved "https://registry.yarnpkg.com/ada-design/-/ada-design-0.1.33.tgz#d780b1b33a9046c46ba81aafa39d4f2ef73e7bf1"
-  integrity sha512-0RnUI98jWf0uzFR36nlS8prynDPZ/2n9iTala0Haykz/1Cg+LrGXYwjhxnDxIWLAu0j3UNF5tNOcsUTbYcRkWg==
+ada-design@^0.1.34:
+  version "0.1.34"
+  resolved "https://registry.yarnpkg.com/ada-design/-/ada-design-0.1.34.tgz#22cd57cadf2bd025400cfc8bf614cbd3ac71b2d4"
+  integrity sha512-/dFaz9QOF8hhGyAelKQRgDSru/z2abgIW1phtvHc1r1yVIqrrd+sWhZ/qEJT4W37FUPQDXvrAsRhYWq6UnJsYg==
   dependencies:
     async-fifo-queue "1.1.0"
     axe-core "4.1.2"
@@ -10079,16 +10079,16 @@ snapdragon@^0.8.1:
     use "^3.1.0"
 
 sockjs-client@^1.5.0:
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/sockjs-client/-/sockjs-client-1.5.0.tgz#2f8ff5d4b659e0d092f7aba0b7c386bd2aa20add"
-  integrity sha512-8Dt3BDi4FYNrCFGTL/HtwVzkARrENdwOUf1ZoW/9p3M8lZdFT35jVdrHza+qgxuG9H3/shR4cuX/X9umUrjP8Q==
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/sockjs-client/-/sockjs-client-1.5.1.tgz#256908f6d5adfb94dabbdbd02c66362cca0f9ea6"
+  integrity sha512-VnVAb663fosipI/m6pqRXakEOw7nvd7TUgdr3PlR/8V2I95QIdwT8L4nMxhyU8SmDBHYXU1TOElaKOmKLfYzeQ==
   dependencies:
     debug "^3.2.6"
     eventsource "^1.0.7"
     faye-websocket "^0.11.3"
     inherits "^2.0.4"
     json3 "^3.3.3"
-    url-parse "^1.4.7"
+    url-parse "^1.5.1"
 
 sockjs@^0.3.21:
   version "0.3.21"
@@ -11048,7 +11048,7 @@ url-loader@4.1.1:
     mime-types "^2.1.27"
     schema-utils "^3.0.0"
 
-url-parse@^1.4.3, url-parse@^1.4.7:
+url-parse@^1.4.3, url-parse@^1.5.1:
   version "1.5.1"
   resolved "https://registry.yarnpkg.com/url-parse/-/url-parse-1.5.1.tgz#d5fa9890af8a5e1f274a2c98376510f6425f6e3b"
   integrity sha512-HOfCOUJt7iSYzEx/UqgtwKRMC6EU91NFhsCHMv9oM03VJcVo2Qrp8T8kI9D7amFf1cu+/3CEhgb3rF9zL7k85Q==
