@@ -1,57 +1,78 @@
-import { useState } from 'react';
-import { A11yContextProvider, Flex, Text, Button, ModalVariantType } from 'ada-design';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { A11yContextProvider, Flex, View, Heading } from 'ada-design';
 import styled from 'styled-components';
 
-import Image from './components/ImageWithA11y';
-import AwesomeModal from './components/AwesomeModal';
-
-import logo from './logo.svg';
 import './App.css';
+import Sidebar from './components/Sidebar';
+import StoriesList from './components/StoriesList';
+import NavBar from './components/NavBar';
 
 const isDev = (): boolean => {
   return !process.env.NODE_ENV || process.env.NODE_ENV === 'development';
 };
 
+const HomeScreen = () => {
+  return (
+    <Screen>
+      <Sidebar />
+      <View marginX={32}>
+        <StoriesList />
+        <Heading size={900} color="white">
+          Feed :)
+        </Heading>
+      </View>
+      <Flex width={250}>To be implemented</Flex>
+    </Screen>
+  );
+};
+
 function App() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [modalVariant, setModalVariant] = useState<ModalVariantType>('default');
-
-  const isTrailModal = modalVariant === 'trail';
-
   return (
     <A11yContextProvider isEnabled={isDev()}>
-      <AppHeader as="header">
-        <Image src={logo} />
+      <Router>
+        <div>
+          <NavBar />
+          <Switch>
+            <Route exact path="/watch">
+              <Heading size={900} color="white" textAlign="center">
+                Watch
+              </Heading>
+            </Route>
+            <Route exact path="/marketplace">
+              <Heading size={900} color="white" textAlign="center">
+                Marketplace
+              </Heading>
+            </Route>
+            <Route exact path="/groups">
+              <Heading size={900} color="white" textAlign="center">
+                Groups
+              </Heading>
+            </Route>
+            <Route exact path="/games">
+              <Heading size={900} color="white" textAlign="center">
+                Games
+              </Heading>
+            </Route>
 
-        <Text marginBottom={24}>Current modal variant: {modalVariant}</Text>
-
-        <Button variant="primary" onClick={() => setIsModalOpen(true)}>
-          Open Modal
-        </Button>
-
-        <Button
-          className="my-awesome-custom-button"
-          shouldShowSuccess={false}
-          variant="primary"
-          marginTop={12}
-          onClick={() => setModalVariant(isTrailModal ? 'default' : 'trail')}
-        >
-          Toggle Modal Variant
-        </Button>
-
-        <AwesomeModal isOpen={isModalOpen} variant={modalVariant} closeModal={() => setIsModalOpen(false)} />
-      </AppHeader>
+            <Route path="/">
+              <HomeScreen />
+            </Route>
+          </Switch>
+        </div>
+      </Router>
     </A11yContextProvider>
   );
 }
 
-const AppHeader = styled(Flex)`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+const Screen = styled(Flex)`
+  overflow-x: hidden;
   min-height: 100vh;
-  background-color: #282c34;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 32px;
+  background-color: #191a1b;
   font-size: calc(10px + 2vmin);
   color: white;
 `;
