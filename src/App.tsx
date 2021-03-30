@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { A11yContextProvider, Flex, Text, Button, ModalVariantType } from 'ada-design';
+import { ADADesignProvider, Flex, Text, Button, ModalVariantType } from 'ada-design';
 import styled from 'styled-components';
 
 import Image from './components/ImageWithA11y';
@@ -19,11 +19,22 @@ function App() {
   const isTrailModal = modalVariant === 'trail';
 
   return (
-    <A11yContextProvider isEnabled={isDev()}>
+    <ADADesignProvider
+      isEnabled={isDev()}
+      value={{
+        colors: {
+          text: {
+            textDefault: 'black',
+          },
+        },
+      }}
+    >
       <AppHeader as="header">
         <Image src={logo} />
 
-        <Text marginBottom={24}>Current modal variant: {modalVariant}</Text>
+        <Text marginBottom={24} color="jewel">
+          Current modal variant: {modalVariant}
+        </Text>
 
         <Button variant="primary" onClick={() => setIsModalOpen(true)}>
           Open Modal
@@ -41,7 +52,7 @@ function App() {
 
         <AwesomeModal isOpen={isModalOpen} variant={modalVariant} closeModal={() => setIsModalOpen(false)} />
       </AppHeader>
-    </A11yContextProvider>
+    </ADADesignProvider>
   );
 }
 
